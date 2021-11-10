@@ -16,6 +16,11 @@ import AuthProvider from './components/Context/AuthProvider';
 import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Purchase from './components/Purchase/Purchase';
+import Pay from './components/Pay/Pay';
+import MyOrder from './components/MyOrder/MyOrder';
+import Review from './components/Review/Review';
+import MakeAdmin from './components/MakeAdmin/MakeAdmin';
+import AddProduct from './components/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -31,29 +36,37 @@ function App() {
             <Route exact path="/home">
               <Home />
             </Route>
-            <PrivateRoute exact path="/explore">
+            <Route exact path="/explore">
               <Explore />
+            </Route>
+            <Route exact path="/pay">
+              <Pay />
+            </Route>
+            <Route exact path="/myOrder">
+              <MyOrder />
+            </Route>
+            <Route exact path="/review">
+              <Review />
+            </Route>
+            <PrivateRoute exact path="/makeAdmin">
+              <MakeAdmin />
             </PrivateRoute>
-            <Route exact path="/purchase/:id">
+            <Route exact path="/addProduct">
+              <AddProduct />
+            </Route>
+            <PrivateRoute exact path="/purchase/:id">
               <Purchase />
-            </Route>
-            <Route exact path="/dashBoard">
+            </PrivateRoute>
+            <PrivateRoute path="/dashBoard">
               <DashBoard />
-            </Route>
-            {/* <PrivateRoute exact path="/placeOrder/:id">
-            <PlaceOrder />
-          </PrivateRoute> */}
+            </PrivateRoute>
             <Route exact path="/login">
               <Login />
             </Route>
             <Route exact path="/register">
               <Register />
             </Route>
-            {/* <Route path="*">
-           <NotFound />
-         </Route> */}
           </Switch>
-          <Footer />
         </Router>
       </AuthProvider>
     </div>
