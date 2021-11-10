@@ -9,7 +9,7 @@ const NavBar = () => {
     const { user, logout } = useAuth();
     return (
         <div>
-            <Navbar className="bg-light" collapseOnSelect expand="lg">
+            <Navbar collapseOnSelect expand="lg">
                 {/* container */}
                 <Container>
                     <Navbar.Brand href="/home">

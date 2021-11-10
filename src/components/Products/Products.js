@@ -6,9 +6,12 @@ const Products = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('/data.json')
+        fetch('http://localhost:5000/products?_limit=6')
             .then(res => res.json())
-            .then(data => setItems(data));
+            .then(data => {
+                data = data.slice(0, 6);
+                setItems(data);
+            });
     }, [])
     return (
         <Container>

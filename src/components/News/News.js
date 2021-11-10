@@ -27,7 +27,7 @@ const News = () => {
                     <Card data-aos="fade-up" className="border-0 rounded-3 cardStyle">
                         <Card.Img className="mt-3" variant="top" src={img2} style={{ width: "100%", height: "100%", margin: "auto" }} />
                         <Card.Body>
-                            <Card.Title>Top Racer 2021</Card.Title>
+                            <Card.Title>Top Racer 2020</Card.Title>
                             <Card.Text className="text-muted">
                                 Dutch researchers are saying that riding a bicycle literally help you live longer. People that cycle live an average of six months longer than those that don’t ride bikes.
                             </Card.Text>
@@ -41,7 +41,7 @@ const News = () => {
                     <Card data-aos="fade-left" className="border-0 rounded-3 cardStyle">
                         <Card.Img className="mt-3" variant="top" src={img3} style={{ width: "100%", height: "100%", margin: "auto" }} />
                         <Card.Body>
-                            <Card.Title>Top Racer 2021</Card.Title>
+                            <Card.Title>Top Racer 2019</Card.Title>
                             <Card.Text className="text-muted">
                                 Dutch researchers are saying that riding a bicycle literally help you live longer. People that cycle live an average of six months longer than those that don’t ride bikes.
                             </Card.Text>

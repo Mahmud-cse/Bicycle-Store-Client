@@ -14,6 +14,7 @@ import DashBoard from './components/DashBoard/DashBoard';
 import Home from './components/Home/Home';
 import AuthProvider from './components/Context/AuthProvider';
 import Register from './components/Register/Register';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -29,9 +30,9 @@ function App() {
             <Route exact path="/home">
               <Home />
             </Route>
-            <Route exact path="/explore">
+            <PrivateRoute exact path="/explore">
               <Explore />
-            </Route>
+            </PrivateRoute>
             <Route exact path="/dashBoard">
               <DashBoard />
             </Route>

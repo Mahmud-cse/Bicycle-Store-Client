@@ -40,5 +40,47 @@
         "price": "800",
         "img": "https://i.ibb.co/YjcrgfK/prod-6.png",
         "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 7,
+        "name": "Mountain Frame",
+        "price": "900",
+        "img": "https://i.ibb.co/YPhygsz/prod-7.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 8,
+        "name": "Mountain Frame",
+        "price": "900",
+        "img": "https://i.ibb.co/MPFK9LY/prod-8.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 9,
+        "name": "Spring Beach",
+        "price": "400",
+        "img": "https://i.ibb.co/5nstgqr/prod-9.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 10,
+        "name": "Monster Beach",
+        "price": "900",
+        "img": "https://i.ibb.co/SQDv5Wk/prod-10.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 11,
+        "name": "Giga MX",
+        "price": "700",
+        "img": "https://i.ibb.co/Mc17Nfv/prod-11.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 12,
+        "name": "Alpha Y9",
+        "price": "999",
+        "img": "https://i.ibb.co/wwD1FZC/prod-12.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
     }
 ]

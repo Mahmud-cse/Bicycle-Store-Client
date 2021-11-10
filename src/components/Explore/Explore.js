@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
+import ExploreList from '../ExploreList/ExploreList';
 
 const Explore = () => {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/products?_limit=6')
+            .then(res => res.json())
+            .then(data => setItems(data));
+    }, [])
     return (
-        <div>
-            <h2>This is explore</h2>
-        </div>
+        <Container>
+            <Row>
+                {
+                    items.map(data => <ExploreList key={data.id} data={data}></ExploreList>)
+                }
+            </Row>
+        </Container>
     );
 };
 
