@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Granite Peak",
+        "price": "400",
+        "img": "https://i.ibb.co/25VKBDB/product-1.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 2,
+        "name": "Hyper E-Ride",
+        "price": "300",
+        "img": "https://i.ibb.co/Mh20fGR/prod-2.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 3,
+        "name": "Light M30",
+        "price": "500",
+        "img": "https://i.ibb.co/hK64Nwv/prod-3.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 4,
+        "name": "Beach Cruiser",
+        "price": "600",
+        "img": "https://i.ibb.co/bFJgkqJ/prod-4.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 5,
+        "name": "Aluminum R10",
+        "price": "700",
+        "img": "https://i.ibb.co/Trc6Vdt/prod-5.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    },
+    {
+        "id": 6,
+        "name": "Steel Frame",
+        "price": "800",
+        "img": "https://i.ibb.co/YjcrgfK/prod-6.png",
+        "description": "The latest cycling news, covering global races, bikes and cycling products"
+    }
+]
