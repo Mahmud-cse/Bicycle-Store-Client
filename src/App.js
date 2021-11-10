@@ -15,6 +15,7 @@ import Home from './components/Home/Home';
 import AuthProvider from './components/Context/AuthProvider';
 import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Purchase from './components/Purchase/Purchase';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
             <PrivateRoute exact path="/explore">
               <Explore />
             </PrivateRoute>
+            <Route exact path="/purchase/:id">
+              <Purchase />
+            </Route>
             <Route exact path="/dashBoard">
               <DashBoard />
             </Route>

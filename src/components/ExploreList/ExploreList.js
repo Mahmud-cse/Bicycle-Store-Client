@@ -24,7 +24,7 @@ const ExploreList = (props) => {
                     </Card.Title>
                 </Card.Body>
                 <div className="mx-auto mb-3">
-                    <Link to={`/serviceDetails/${id}`}>
+                    <Link to={`/purchase/${id}`}>
                         <Button variant="outline-primary">Buy Now</Button>
                     </Link>
                 </div>

@@ -6,7 +6,7 @@ const Explore = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products?_limit=6')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setItems(data));
     }, [])
