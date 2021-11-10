@@ -52,17 +52,14 @@ function Dashboard(props) {
             <Toolbar />
             <Divider />
 
-            <Box style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-                {/* Normal User */}
-                <NavLink to={`${url}/pay`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Pay</Button></NavLink>
-                <NavLink to={`${url}/review`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Review</Button></NavLink>
-                <NavLink to={`${url}/myOrder`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >My Orders</Button></NavLink>
-
-
-                {/* Admin */}
-                {/* <NavLink to={`${url}/makeAdmin`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Make Admin</Button></NavLink>
-                <NavLink to={`${url}/addProduct`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Add Product</Button></NavLink> */}
-            </Box>
+            {!admin &&
+                <Box style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                    {/* Normal User */}
+                    <NavLink to={`${url}/pay`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Pay</Button></NavLink>
+                    <NavLink to={`${url}/review`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Review</Button></NavLink>
+                    <NavLink to={`${url}/myOrder`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >My Orders</Button></NavLink>
+                </Box>
+            }
             {admin &&
                 <Box style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                     <NavLink to={`${url}/makeAdmin`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Make Admin</Button></NavLink>
