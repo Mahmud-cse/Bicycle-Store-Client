@@ -12,38 +12,45 @@ import Footer from './components/Footer/Footer';
 import Explore from './components/Explore/Explore';
 import DashBoard from './components/DashBoard/DashBoard';
 import Home from './components/Home/Home';
+import AuthProvider from './components/Context/AuthProvider';
+import Register from './components/Register/Register';
 
 function App() {
   return (
     <div>
       {/* context with router */}
-      <Router>
-        <NavBar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/explore">
-            <Explore />
-          </Route>
-          <Route exact path="/dashBoard">
-            <DashBoard />
-          </Route>
-          {/* <PrivateRoute exact path="/placeOrder/:id">
+      <AuthProvider>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/home">
+              <Home />
+            </Route>
+            <Route exact path="/explore">
+              <Explore />
+            </Route>
+            <Route exact path="/dashBoard">
+              <DashBoard />
+            </Route>
+            {/* <PrivateRoute exact path="/placeOrder/:id">
             <PlaceOrder />
           </PrivateRoute> */}
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          {/* <Route path="*">
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/register">
+              <Register />
+            </Route>
+            {/* <Route path="*">
            <NotFound />
          </Route> */}
-        </Switch>
-        <Footer />
-      </Router>
+          </Switch>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

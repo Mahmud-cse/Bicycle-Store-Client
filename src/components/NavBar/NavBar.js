@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Nav, Navbar, Stack, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 import image from '../img/logo.png';
 import './NavBar.css';
 
 const NavBar = () => {
-    // const { user, signOutUsingGoogle } = useAuth();
+    const { user, logout } = useAuth();
     return (
         <div>
             <Navbar className="bg-light" collapseOnSelect expand="lg">
@@ -40,19 +41,20 @@ const NavBar = () => {
                                     fontWeight: "bold",
                                     color: "black"
                                 }}>Dashboard</NavLink>
-
-                                {/* <NavLink to="" onClick={signOutUsingGoogle} className="f-13" style={{ color: "black" }} activeStyle={{
+                                {
+                                    user?.email ?
+                                        <NavLink to="" onClick={logout} className="f-13" style={{ color: "black" }} activeStyle={{
                                             fontWeight: "bold",
                                             color: "black"
                                         }}>
                                             <Button variant="dark" className="rounded-pill">LogOut</Button>
-                                        </NavLink> */}
-
-                                <NavLink to="/login" className="f-13" style={{ color: "black" }} activeStyle={{
-                                    fontWeight: "bold",
-                                    color: "black"
-                                }}>Login</NavLink>
-
+                                        </NavLink>
+                                        :
+                                        <NavLink to="/login" className="f-13" style={{ color: "black" }} activeStyle={{
+                                            fontWeight: "bold",
+                                            color: "black"
+                                        }}>Login</NavLink>
+                                }
                             </Stack>
                         </Nav>
                     </Navbar.Collapse>

@@ -12,7 +12,7 @@ const Products = () => {
     }, [])
     return (
         <Container>
-            <h2 style={{ textAlign: "center", marginTop: "100px" }}><span style={{ borderBottom: "5px solid black" }}>Our Services</span></h2>
+            <h2 style={{ textAlign: "center", marginTop: "100px" }}><span style={{ borderBottom: "5px solid black" }}>Our Products</span></h2>
 
             <Row>
                 {
