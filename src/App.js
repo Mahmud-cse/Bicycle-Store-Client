@@ -19,9 +19,7 @@ import Purchase from './components/Purchase/Purchase';
 import Pay from './components/Pay/Pay';
 import MyOrder from './components/MyOrder/MyOrder';
 import Review from './components/Review/Review';
-import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 import AddProduct from './components/AddProduct/AddProduct';
-import MyOrderList from './components/MyOrderList/MyOrderList';
 
 function App() {
   return (

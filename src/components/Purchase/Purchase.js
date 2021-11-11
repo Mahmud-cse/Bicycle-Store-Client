@@ -45,8 +45,6 @@ const Purchase = () => {
             })
     };
 
-    console.log(specificDetail?.price);
-
     return (
         <>
             <NavBar />

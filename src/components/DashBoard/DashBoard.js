@@ -43,7 +43,7 @@ function Dashboard(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth();
+    const { admin, logout } = useAuth();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -60,6 +60,7 @@ function Dashboard(props) {
                     <NavLink to={`${url}/pay`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Pay</Button></NavLink>
                     <NavLink to={`${url}/review`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Review</Button></NavLink>
                     <NavLink to={`${url}/myOrder`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >My Orders</Button></NavLink>
+                    <NavLink to="/" style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" onClick={logout}>LogOut</Button></NavLink>
                 </Box>
             }
             {admin &&
@@ -68,6 +69,7 @@ function Dashboard(props) {
                     <NavLink to={`${url}/addProduct`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Add Product</Button></NavLink>
                     <NavLink to={`${url}/manageOrders`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Manage Orders</Button></NavLink>
                     <NavLink to={`${url}/manageProducts`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Manage Products</Button></NavLink>
+                    <NavLink to="/" style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" onClick={logout}>LogOut</Button></NavLink>
                 </Box>
             }
 

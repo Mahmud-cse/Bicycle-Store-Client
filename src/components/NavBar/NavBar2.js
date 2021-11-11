@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar, Stack, Button, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, Stack, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import image from '../img/logo.png';
@@ -47,14 +47,15 @@ const NavBar = () => {
                                         :
                                         " "
                                 }
-                                {/* <span>{user.displayName}</span> */}
+
+                                <span>{user.displayName}</span>
                                 {
                                     user?.email ?
                                         <NavLink to="" onClick={logout} className="f-13" style={{ color: "black" }} activeStyle={{
                                             fontWeight: "bold",
                                             color: "black"
                                         }}>
-                                            <Button variant="dark" className="rounded-pill">LogOut({user.displayName})</Button>
+                                            <Button variant="dark" className="rounded-pill">LogOut</Button>
                                         </NavLink>
                                         :
                                         <NavLink to="/login" className="f-13" style={{ color: "black" }} activeStyle={{
