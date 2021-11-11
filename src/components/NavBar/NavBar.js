@@ -41,6 +41,9 @@ const NavBar = () => {
                                     fontWeight: "bold",
                                     color: "black"
                                 }}>Dashboard</NavLink>
+
+                                <span>{user.displayName}</span>
+
                                 {
                                     user?.email ?
                                         <NavLink to="" onClick={logout} className="f-13" style={{ color: "black" }} activeStyle={{

@@ -2,14 +2,13 @@ import { Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import useAuth from '../hooks/useAuth';
-import MyOrderList from '../MyOrderList/MyOrderList';
+import ManageOrdersList from '../ManageOrdersList/ManageOrdersList';
 
 // import axios from 'axios';
 
-const MyOrder = () => {
+const ManageOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
-    const [specificDetail, setSpecificDetail] = useState([]);
 
     useEffect(() => {
         fetch("http://localhost:5000/orders")
@@ -17,22 +16,15 @@ const MyOrder = () => {
             .then(data => setOrders(data));
     }, []);
 
-    useEffect(() => {
-        if (orders.length > 0) {
-            const matchedData = orders.filter(order => order.email == user.email);
-            setSpecificDetail(matchedData);
-        }
-    }, [orders]);
-
     return (
         <div>
             <Grid container spacing={5} >
                 {
-                    specificDetail.map(data => <MyOrderList key={data._id} data={data} />)
+                    orders.map(data => <ManageOrdersList key={data._id} data={data} />)
                 }
             </Grid>
         </div>
     );
 };
 
-export default MyOrder;
+export default ManageOrders;

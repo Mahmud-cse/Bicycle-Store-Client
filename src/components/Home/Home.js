@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
+import NavBar from '../NavBar/NavBar';
 import News from '../News/News';
 import Products from '../Products/Products';
 import Slider from '../Slider/Slider';
@@ -7,6 +8,7 @@ import Slider from '../Slider/Slider';
 const Home = () => {
     return (
         <div>
+            <NavBar />
             <Slider></Slider>
             <Products></Products>
             <News></News>

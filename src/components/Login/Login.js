@@ -4,6 +4,7 @@ import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import useAuth from '../hooks/useAuth';
 import img from '../img/login.png';
+import NavBar from '../NavBar/NavBar';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
@@ -26,6 +27,7 @@ const Login = () => {
 
     return (
         <>
+            <NavBar />
             <Container style={{ marginTop: "20px" }}>
                 <Grid container spacing={2}>
                     <Grid item sx={{ mt: 8 }} xs={12} md={6}>

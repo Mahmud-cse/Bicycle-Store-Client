@@ -21,6 +21,7 @@ import MyOrder from './components/MyOrder/MyOrder';
 import Review from './components/Review/Review';
 import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 import AddProduct from './components/AddProduct/AddProduct';
+import MyOrderList from './components/MyOrderList/MyOrderList';
 
 function App() {
   return (
@@ -28,7 +29,6 @@ function App() {
       {/* context with router */}
       <AuthProvider>
         <Router>
-          <NavBar />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -42,15 +42,15 @@ function App() {
             <Route exact path="/pay">
               <Pay />
             </Route>
-            <Route exact path="/myOrder">
+            <Route path="/myOrder">
               <MyOrder />
             </Route>
             <Route exact path="/review">
               <Review />
             </Route>
-            <PrivateRoute exact path="/makeAdmin">
+            {/* <PrivateRoute exact path="/makeAdmin">
               <MakeAdmin />
-            </PrivateRoute>
+            </PrivateRoute> */}
             <Route exact path="/addProduct">
               <AddProduct />
             </Route>

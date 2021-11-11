@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import ExploreList from '../ExploreList/ExploreList';
 import Footer from '../Footer/Footer';
+import NavBar from '../NavBar/NavBar';
 
 const Explore = () => {
     const [items, setItems] = useState([]);
@@ -13,6 +14,7 @@ const Explore = () => {
     }, [])
     return (
         <>
+            <NavBar />
             <Container>
                 <Row>
                     {

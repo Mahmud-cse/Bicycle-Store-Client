@@ -31,6 +31,8 @@ import Pay from '../Pay/Pay';
 import Review from '../Review/Review';
 import MyOrder from '../MyOrder/MyOrder';
 import AddProduct from '../AddProduct/AddProduct';
+import ManageOrders from '../ManageOrders/ManageOrders';
+import ManageProducts from '../ManageProducts/ManageProducts';
 
 const drawerWidth = 210;
 
@@ -64,6 +66,8 @@ function Dashboard(props) {
                 <Box style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                     <NavLink to={`${url}/makeAdmin`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Make Admin</Button></NavLink>
                     <NavLink to={`${url}/addProduct`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Add Product</Button></NavLink>
+                    <NavLink to={`${url}/manageOrders`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Manage Orders</Button></NavLink>
+                    <NavLink to={`${url}/manageProducts`} style={{ color: 'black', textDecoration: 'none' }}><Button color="inherit" >Manage Products</Button></NavLink>
                 </Box>
             }
 
@@ -159,6 +163,12 @@ function Dashboard(props) {
                     </Route>
                     <Route exact path={`${path}/addProduct`}>
                         <AddProduct></AddProduct>
+                    </Route>
+                    <Route exact path={`${path}/manageOrders`}>
+                        <ManageOrders></ManageOrders>
+                    </Route>
+                    <Route exact path={`${path}/manageProducts`}>
+                        <ManageProducts></ManageProducts>
                     </Route>
                 </Switch>
             </Box>

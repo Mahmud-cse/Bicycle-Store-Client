@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import useAuth from '../hooks/useAuth';
 import './Purchase.css';
 import Footer from '../Footer/Footer';
+import NavBar from '../NavBar/NavBar';
 
 const Purchase = () => {
 
@@ -48,6 +49,7 @@ const Purchase = () => {
 
     return (
         <>
+            <NavBar />
             <div style={{ marginBottom: "50px" }} >
                 <Container >
                     <Row className="d-flex justify-content-center align-items-center">
@@ -64,8 +66,8 @@ const Purchase = () => {
 
                                 <input defaultValue={user.email} {...register("email")} />
                                 <input defaultValue="pending" {...register("status")} />
-                                <input placeholder="Enter exact cycle name please" defaultValue="" {...register("strMeal", { validate: value => value === specificDetail?.name })} />
-                                <input placeholder="Input original cycle price without dollar sign" defaultValue="" {...register("strPrice", { validate: value => value === specificDetail?.price })} />
+                                <input placeholder="Enter exact cycle name please" defaultValue="" {...register("cycleName", { validate: value => value === specificDetail?.name })} />
+                                <input placeholder="Input original cycle price without dollar sign" defaultValue="" {...register("price", { validate: value => value === specificDetail?.price })} />
                                 <input placeholder="Address" defaultValue="" {...register("address")} />
                                 <input placeholder="phone number" defaultValue="" {...register("phone")} />
 

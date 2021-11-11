@@ -9,9 +9,9 @@ const News = () => {
         <Container style={{ marginBottom: "100px" }}>
             <h2 style={{ textAlign: "center", marginTop: "100px" }}><span style={{ borderBottom: "5px solid black" }}>News</span></h2>
             <Row>
-                <Col md={4} className="gap-5 mb-5 mt-5">
-                    <Card data-aos="fade-right" className="border-0 rounded-3 cardStyle">
-                        <Card.Img className="mt-3" variant="top" src={img} style={{ width: "100%", height: "100%", margin: "auto" }} />
+                <Col md={4} className="mb-5 mt-5">
+                    <Card className="border-0 rounded-3 cardStyle">
+                        <Card.Img className="mt-3" variant="top" src={img} style={{ width: "90%", height: "90%", margin: "auto" }} />
                         <Card.Body>
                             <Card.Title>Top Racer 2021</Card.Title>
                             <Card.Text className="text-muted">
@@ -23,9 +23,9 @@ const News = () => {
                         </div>
                     </Card>
                 </Col>
-                <Col md={4} className="gap-5 mb-5 mt-5">
-                    <Card data-aos="fade-up" className="border-0 rounded-3 cardStyle">
-                        <Card.Img className="mt-3" variant="top" src={img2} style={{ width: "100%", height: "100%", margin: "auto" }} />
+                <Col md={4} className="mb-5 mt-5">
+                    <Card className="border-0 rounded-3 cardStyle">
+                        <Card.Img className="mt-3" variant="top" src={img2} style={{ width: "90%", height: "90%", margin: "auto" }} />
                         <Card.Body>
                             <Card.Title>Top Racer 2020</Card.Title>
                             <Card.Text className="text-muted">
@@ -37,9 +37,9 @@ const News = () => {
                         </div>
                     </Card>
                 </Col>
-                <Col md={4} className="gap-5 mb-5 mt-5">
-                    <Card data-aos="fade-left" className="border-0 rounded-3 cardStyle">
-                        <Card.Img className="mt-3" variant="top" src={img3} style={{ width: "100%", height: "100%", margin: "auto" }} />
+                <Col md={4} className="mb-5 mt-5">
+                    <Card className="border-0 rounded-3 cardStyle">
+                        <Card.Img className="mt-3" variant="top" src={img3} style={{ width: "90%", height: "90%", margin: "auto" }} />
                         <Card.Body>
                             <Card.Title>Top Racer 2019</Card.Title>
                             <Card.Text className="text-muted">
