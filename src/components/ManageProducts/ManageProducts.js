@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch("https://shielded-shelf-30657.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
@@ -14,7 +14,7 @@ const ManageProducts = () => {
         const confirm = window.confirm("are you sure ?");
 
         if (confirm === true) {
-            const url = `http://localhost:5000/products/${id}`
+            const url = `https://shielded-shelf-30657.herokuapp.com/products/${id}`
             fetch(url, {
                 method: "DELETE"
             })

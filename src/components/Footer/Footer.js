@@ -10,7 +10,7 @@ const Footer = () => {
                 <Row>
                     <Col lg="6">
                         <Row>
-                            <Col xs="6" lg="4">
+                            <Col xs="4" lg="4">
                                 <ul className="list-unstyled" style={{ color: "white" }}>
                                     <li>About Our Service</li>
                                     <li>Read Our Blog</li>
@@ -18,7 +18,7 @@ const Footer = () => {
                                     <li>Add your Account</li>
                                 </ul>
                             </Col>
-                            <Col xs="6" lg="4">
+                            <Col xs="4" lg="4">
                                 <ul className="list-unstyled" style={{ color: "white" }}>
                                     <li>Road Bike</li>
                                     <li>Mountain Bike</li>
@@ -26,7 +26,7 @@ const Footer = () => {
                                     <li>City</li>
                                 </ul>
                             </Col>
-                            <Col xs="6" lg="4">
+                            <Col xs="4" lg="4">
                                 <ul className="list-unstyled" style={{ color: "white" }}>
                                     <li>Info</li>
                                     <li>Shipping</li>
@@ -39,7 +39,7 @@ const Footer = () => {
                     </Col>
                     <Col lg="6">
                         <Row>
-                            <Col xs="6" lg="4">
+                            <Col xs="4" lg="4">
                                 <ul className="list-unstyled" style={{ color: "white" }}>
                                     <li>Quick links</li>
                                     <li>Policy</li>
@@ -47,7 +47,7 @@ const Footer = () => {
                                     <li>Return</li>
                                 </ul>
                             </Col>
-                            <Col xs="6" lg="4">
+                            <Col xs="4" lg="4">
                                 <ul className="list-unstyled" style={{ color: "white" }}>
                                     <li>Get Help</li>
                                     <li>Read FAQs</li>
@@ -55,7 +55,7 @@ const Footer = () => {
                                     <li>Available Doctor's</li>
                                 </ul>
                             </Col>
-                            <Col xs="6" lg="4">
+                            <Col xs="4" lg="4">
                                 <ul className="list-unstyled" style={{ color: "white" }}>
                                     <li>Facebook</li>
                                     <li>Instragram</li>

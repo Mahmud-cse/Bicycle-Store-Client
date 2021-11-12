@@ -14,7 +14,7 @@ const Purchase = () => {
     const [specificDetail, setSpecificDetail] = useState({});
 
     useEffect(() =>
-        fetch("http://localhost:5000/products")
+        fetch("https://shielded-shelf-30657.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setDetails(data)), []);
 
@@ -29,7 +29,7 @@ const Purchase = () => {
     const { user } = useAuth();
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://shielded-shelf-30657.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -9,7 +9,7 @@ const Review = () => {
 
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://shielded-shelf-30657.herokuapp.com/addReview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

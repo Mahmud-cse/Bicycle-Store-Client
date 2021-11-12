@@ -8,7 +8,7 @@ const UserReview = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://shielded-shelf-30657.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setItems(data));
     }, []);

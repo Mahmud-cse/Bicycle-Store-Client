@@ -6,24 +6,24 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import { useTheme } from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import image from '../img/logo.png';
+import useAuth from '../hooks/useAuth';
 
 
 export default function NavBar() {
+    const { user, logout } = useAuth();
     const theme = useTheme();
     const useStyle = makeStyles({
         navItem: {
-            color: '#fff',
+            color: 'black',
             textDecoration: 'none'
         },
         navIcon: {
@@ -65,9 +65,37 @@ export default function NavBar() {
                 <Divider />
                 <ListItem button >
                     <ListItemText>
+                        <Link className={mobileNavItem} to="/explore">Explore</Link>
+                    </ListItemText>
+                </ListItem>
+                <Divider />
+                <ListItem button >
+                    <ListItemText>
                         <Link className={mobileNavItem} to="/dashBoard">Dashboard</Link>
                     </ListItemText>
                 </ListItem>
+                <Divider />
+
+                <ListItem button >
+                    <ListItemText>
+                        <span>{user.displayName}</span>
+                    </ListItemText>
+                </ListItem>
+                <Divider />
+                {
+                    user?.email ?
+                        <ListItem button >
+                            <ListItemText>
+                                <Link className={mobileNavItem} to="/" onClick={logout}>Logout</Link>
+                            </ListItemText>
+                        </ListItem>
+                        :
+                        <ListItem button >
+                            <ListItemText>
+                                <Link className={mobileNavItem} to="/login">Login</Link>
+                            </ListItemText>
+                        </ListItem>
+                }
                 <Divider />
             </List>
         </Box>
@@ -75,12 +103,12 @@ export default function NavBar() {
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
+                <AppBar sx={{ bgcolor: "white" }} elevation={0} position="static">
                     <Toolbar>
                         <IconButton
                             size="large"
                             edge="start"
-                            color="inherit"
+                            color="success"
                             aria-label="menu"
                             sx={{ mr: 2 }}
                             className={navIcon}
@@ -89,11 +117,23 @@ export default function NavBar() {
                             <MenuIcon />
                         </IconButton>
                         <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            News
+                            <img src={image} alt="" style={{ width: "50px", height: "50px" }} />
                         </Typography>
                         <Box className={navItemContainer}>
                             <Link className={navItem} to="/"><Button color="inherit">Home</Button></Link>
-                            <Link className={navItem} to="/dashBoard"><Button color="inherit">Dashboard</Button></Link>
+                            <Link className={navItem} to="/explore"><Button color="inherit">Explore</Button></Link>
+                            {
+                                user?.email ?
+                                    <Link className={navItem} to="/dashBoard"><Button color="inherit">Dashboard</Button></Link>
+                                    :
+                                    ""
+                            }
+                            <span style={{ color: "black" }}>{user.displayName}</span>
+                            {user?.email ?
+                                <Link className={navItem} to="/" onClick={logout}><Button color="inherit">Logout</Button></Link>
+                                :
+                                <Link className={navItem} to="/login"><Button color="inherit">Login</Button></Link>
+                            }
                         </Box>
                     </Toolbar>
                 </AppBar>

@@ -6,7 +6,7 @@ const Products = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://shielded-shelf-30657.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 data = data.slice(0, 6);
